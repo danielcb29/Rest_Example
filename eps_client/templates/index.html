@@ -1,0 +1,65 @@
+{% extends 'base_admin.html' %}
+{% load staticfiles %}
+
+{% block title %}
+    Inicio | Base
+{% endblock %}
+
+{% block welcome %}
+    Buscador de EPS por código
+{% endblock %}
+
+{% block title_content %}
+    Buscador EPS
+{% endblock %}
+
+{% block breadcrum %}
+    <li>
+        <a href="">Inicio</a>
+    </li>
+    <li class="active">
+        <strong>Busqueda</strong>
+    </li>
+{% endblock %}
+
+{% block content %}
+    <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-content">
+                <h2>
+                   Resultados para: <span class="text-navy">{% if codigo %}{{ codigo }}{% else %} <small>No se ha realizado búsqueda</small>{% endif %}</span>
+                </h2>
+
+
+                <div class="search-form">
+                    <form action="index.html" method="get">
+                        <div class="input-group">
+                            <input type="text" placeholder="Código de EPS" name="search" class="form-control input-lg">
+                            <div class="input-group-btn">
+                                <button class="btn btn-lg btn-primary" type="submit">
+                                    Buscar
+                                </button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+
+                {% for eps in resultados %}
+                    <div class="hr-line-dashed"></div>
+                    <div class="search-result">
+                        <h3><a href="#">{{ eps.nombre }}</a></h3>
+                        <a href="#" class="search-link">{{ eps.codigo }}</a>
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                {% empty %}
+                    <div class="hr-line-dashed"></div>
+                    <p>No hay resultados</p>
+                    <div class="hr-line-dashed"></div>
+                {% endfor %}
+
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
