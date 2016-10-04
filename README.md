@@ -6,6 +6,7 @@ To install the proyect follow next instructions
 - Clone 
 - Create a python3 virtualenv 
 - Install the requeriments (requeriments.txt)
+- Create and configure PSQL database
 - Run both projects 
 
 # By
