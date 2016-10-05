@@ -29,7 +29,7 @@
                 <h2>
                    Resultados para: <span class="text-navy">{% if codigo %}{{ codigo }}{% else %} <small>No se ha realizado búsqueda</small>{% endif %}</span>
                 </h2>
-
+                <small><strong>Resultados mostrados: 6, Total resultados: {{ total }}</strong></small>
 
                 <div class="search-form">
                     <form action="{% url 'client:buscar' %}" method="get">
@@ -51,13 +51,13 @@
                         <h3><a href="#">{{ eps.nombre }}</a></h3>
                         <a href="#" class="search-link">{{ eps.codigo }}</a>
                     </div>
-                    <div class="hr-line-dashed"></div>
+
                 {% empty %}
                     <div class="hr-line-dashed"></div>
                     <p>No hay resultados</p>
                     <div class="hr-line-dashed"></div>
                 {% endfor %}
-
+                <div class="hr-line-dashed"></div>
 
             </div>
         </div>

@@ -6,3 +6,4 @@ django-filter==0.15.2
 django-bootstrap3==5.4.0
 django-formtools==1.0
 Pillow==2.8.1
+requests==2.11.1

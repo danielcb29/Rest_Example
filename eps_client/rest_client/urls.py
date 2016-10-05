@@ -15,9 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.views.generic import TemplateView
-from rest_client.views import buscar_EPS
+from rest_client.views import InicioView, BuscarEPSView
 
 urlpatterns = [
-    url(r'^$', TemplateView.as_view(template_name='index.html'), name='inicio'),
-    url(r'^buscar$', buscar_EPS, name='buscar')
+    url(r'^$', InicioView.as_view(), name='inicio'),
+    url(r'^buscar$', BuscarEPSView.as_view(), name='buscar')
 ]
