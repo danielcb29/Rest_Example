@@ -8,7 +8,7 @@ To install the proyect follow next instructions
 - Install the requeriments (requeriments.txt)
 - Create and configure PSQL database
 - Set EPS initial data
-- Run both projects 
+- Run both projects (server in port 8088)
 
 # By
 Daniel Correa 
