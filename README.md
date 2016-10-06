@@ -19,7 +19,11 @@ To install the proyect follow next instructions
 
 3. Install the requeriments (requeriments.txt)
 
-	- pip install -r requeriments.txt.
+
+	```python
+	pip install -r requeriments.txt
+	```
+	
 
 4. Create and configure PSQL database
 
@@ -38,13 +42,13 @@ To install the proyect follow next instructions
 	- eps_server: 
 
 	```python
-		python manage.py runserver 8088
+	python manage.py runserver 8088
 	```
 	- eps_client:
 
 	
 	```python
-		python manage.py runserver 8087
+	python manage.py runserver 8087
 	```
 
 7. Go http://localhost:8087
