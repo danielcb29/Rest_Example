@@ -7,7 +7,15 @@ To install the proyect follow next instructions
 
 2. Create a python3 virtualenv:
 
-	- Virtualenv wrapper: mkvirtualenv rest_example.
+	- Virtualenv wrapper: 
+	
+	```python
+	mkvirtualenv rest_example
+	```
+	
+	```python
+	workon rest_example
+	```
 
 3. Install the requeriments (requeriments.txt)
 
