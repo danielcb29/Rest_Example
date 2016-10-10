@@ -32,12 +32,22 @@ To install the proyect follow next instructions
 	- Database user: eps_server.
 
 	- Database pass: eps_server.
+	
+5. Migrate eps_server 
 
-5. Set EPS initial data
+	```python
+	cd eps_server
+	```
+
+	```python
+	python manage.py migrate
+	```
+
+6. Set EPS initial data
 
 	- Run eps_server/datos_iniciales/datos_eps.sql in database eps_server.
 
-6. Run both projects (server in port 8088)
+7. Run both projects (server in port 8088)
 
 	- eps_server: 
 
@@ -51,9 +61,11 @@ To install the proyect follow next instructions
 	python manage.py runserver 8087
 	```
 
-7. Go http://localhost:8087
+8. Go to http://localhost:8087
 
 # By
 Daniel Correa 
+
 EISC
+
 Universidad del Valle
